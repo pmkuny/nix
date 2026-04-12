@@ -14,6 +14,7 @@
         ../../modules/home/patch
         ../../modules/packages
         ../../modules/home/firefox
+        ../../modules/home/obsidian
       ];
 
       home = {

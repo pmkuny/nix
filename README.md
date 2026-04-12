@@ -27,6 +27,7 @@ This repository is a Nix flake that defines system configurations for multiple m
   - `home/` - user-level home modules
     - `base.nix` - base home config
     - `firefox.nix` - shared Firefox configuration across Linux and macOS
+    - `obsidian.nix` - shared Obsidian configuration across Linux and macOS
     - `patch/` - patch-specific user config (shell, vim, git, etc.)
 
 ## Flake outputs

@@ -13,6 +13,7 @@
       imports = [
         ../../modules/home/patch
         ../../modules/home/firefox
+        ../../modules/home/obsidian
       ];
 
       home = {
