@@ -12,9 +12,9 @@
     users.patch = {
       imports = [
         ../../modules/home/patch
-        ../../modules/packages
-        ../../modules/home/firefox
-        ../../modules/home/obsidian
+        ../../modules/packages.nix
+        ../../modules/home/firefox.nix
+        ../../modules/home/obsidian.nix
       ];
 
       home = {
