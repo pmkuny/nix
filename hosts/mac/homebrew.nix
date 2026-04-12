@@ -2,6 +2,7 @@
   homebrew = {
     enable = true;
     brews = [
+  "gemini-cli"
   "starship"
   ];
     casks = [

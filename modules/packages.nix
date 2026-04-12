@@ -5,6 +5,7 @@
     pkgs.starship
     pkgs.firefox
     pkgs.google-chrome
+    pkgs.gemini-cli
     pkgs.vscode
     pkgs.vlc
     pkgs.steam
