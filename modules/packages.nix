@@ -14,6 +14,5 @@
     pkgs.element-desktop
     pkgs.tailscale
     pkgs.wireguard-tools
-    pkgs.wireguard
   ];
 }
