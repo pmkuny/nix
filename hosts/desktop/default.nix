@@ -1,7 +1,8 @@
-{ inputs, ... }:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    ../linux/default.nix
+  # Specific settings for CachyOS Desktop
+  home.packages = with pkgs; [
+    # Any desktop-specific tools you want
   ];
 }
