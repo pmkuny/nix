@@ -24,7 +24,8 @@
         enable = true;
         target = config.home.homeDirectory + "/Self";
         settings = {
-          # Vault-specific settings can go here
+          sync.enabled = true;
+          # Other vault-specific settings
         };
       };
     };
