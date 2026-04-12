@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../linux/default.nix
+    ../../modules/os/linux/default.nix
     ./hardware-configuration.nix
   ];
 }

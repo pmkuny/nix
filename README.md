@@ -6,9 +6,10 @@ Personal Nix configuration for NixOS and macOS hosts.
 
 This repository is a Nix flake that defines system configurations for multiple machines. It includes:
 
-- NixOS hosts under `hosts/linux` and `hosts/desktop`
-- macOS / nix-darwin hosts under `hosts/mac`, `hosts/mbp`, and `hosts/macmini`
+- NixOS hosts under `hosts/tpx1` and `hosts/desktop`
+- macOS / nix-darwin hosts under `hosts/mbp`, and `hosts/macmini`
 - Shared home-manager and package configuration under `modules`
+- Shared OS-specific modules under `modules/os`
 
 ## Repository structure
 
@@ -16,12 +17,13 @@ This repository is a Nix flake that defines system configurations for multiple m
   - Root flake that defines inputs and outputs for each machine.
 - `hosts/`
   - `desktop/` - Linux desktop configuration
-  - `linux/` - Base Linux host configuration
-  - `mac/` - Shared macOS modules for nix-darwin
   - `mbp/` - macOS MacBook Pro configuration
   - `macmini/` - macOS Mac Mini configuration
   - `tpx1/` - Linux laptop configuration
 - `modules/`
+  - `os/`
+    - `linux/` - Shared Linux configuration
+    - `mac/` - Shared macOS modules for nix-darwin
   - `home-manager.nix` - home-manager modules and shared options
   - `packages.nix` - shared user packages for Linux hosts
   - `home/` - user-level home modules
@@ -85,7 +87,7 @@ darwin-rebuild switch --flake .#macmini
 
 - `modules/home/patch/default.nix` contains user-specific settings for `patch`.
 - `modules/home/base.nix` includes common shell and package defaults.
-- `hosts/mac` contains shared macOS configuration and brew/home-manager modules.
+- `modules/os/mac` contains shared macOS configuration and brew/home-manager modules.
 
 ## License
 
