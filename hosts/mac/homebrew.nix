@@ -26,7 +26,6 @@
   "music-presence"
   "notunes"
   "nvidia-geforce-now"
-  "obsidian"
   "onedrive"
   "raycast"
   "stats"

@@ -5,6 +5,12 @@
     pkgs.tree
     ];
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
+
   programs.zsh.enable = true;
 
   system.stateVersion = 6;  # for macOS 26

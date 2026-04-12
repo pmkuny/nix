@@ -17,7 +17,7 @@
       home = {
         username = "patch";
         homeDirectory = "/Users/patch";
-        stateVersion = "24.05";
+        stateVersion = "25.11";
       };
     };
   };

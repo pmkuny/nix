@@ -12,14 +12,14 @@
     users.patch = {
       imports = [
         ../../modules/home/patch
-        ../../modules/home/firefox
-        ../../modules/home/obsidian
+        ../../modules/home/firefox.nix
+        ../../modules/home/obsidian.nix
       ];
 
       home = {
         username = "patch";
         homeDirectory = "/Users/patch";
-        stateVersion = "24.05";
+        stateVersion = "25.11";
       };
     };
   };
