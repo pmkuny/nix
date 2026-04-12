@@ -12,6 +12,7 @@
     users.patch = {
       imports = [
         ../../modules/home/patch
+        ../../modules/home/firefox
       ];
 
       home = {

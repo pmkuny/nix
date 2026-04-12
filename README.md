@@ -23,9 +23,10 @@ This repository is a Nix flake that defines system configurations for multiple m
   - `tpx1/` - Linux laptop configuration
 - `modules/`
   - `home-manager.nix` - home-manager modules and shared options
-  - `packages.nix` - package definitions and package-related helpers
+  - `packages.nix` - shared user packages for Linux hosts
   - `home/` - user-level home modules
     - `base.nix` - base home config
+    - `firefox.nix` - shared Firefox configuration across Linux and macOS
     - `patch/` - patch-specific user config (shell, vim, git, etc.)
 
 ## Flake outputs

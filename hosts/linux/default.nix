@@ -13,6 +13,7 @@
       imports = [
         ../../modules/home/patch
         ../../modules/packages
+        ../../modules/home/firefox
       ];
 
       home = {
