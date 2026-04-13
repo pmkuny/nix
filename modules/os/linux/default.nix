@@ -50,10 +50,10 @@
 
     users.patch = {
       imports = [
-        ../../modules/home/patch
-        ../../modules/packages.nix
-        ../../modules/home/firefox.nix
-        ../../modules/home/obsidian.nix
+        ../../home/patch
+        ../../packages.nix
+        ../../home/firefox.nix
+        ../../home/obsidian.nix
       ];
 
       home = {
