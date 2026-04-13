@@ -58,7 +58,7 @@
           home.username = "patch";
           home.homeDirectory = "/home/patch";
           home.stateVersion = "25.11";
-          programs.home-manager.enable = true;
+          programs.home-manager.enable = true; nixpkgs.config.allowUnfree = true;
         }
       ];
     };
