@@ -13,6 +13,7 @@
     pkgs.element-desktop
     pkgs.tailscale
     pkgs.wireguard-tools
+    pkgs.zellij
   ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
     pkgs.steam
   ];

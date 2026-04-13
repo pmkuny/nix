@@ -4,6 +4,7 @@
     brews = [
   "gemini-cli"
   "starship"
+  "zellij"
   ];
     casks = [
   "alt-tab"

@@ -1,4 +1,22 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }: 
+
+
+let
+  zellijeval = ''
+    if [[ -z "$ZELLIJ" ]]; then
+        if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+            zellij attach -c
+        else
+            zellij
+        fi
+
+        if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+            exit
+        fi
+    fi
+  '';
+in
+{
 
     imports = [
       ../base.nix
@@ -13,12 +31,16 @@
             };
 
 # set up shell
+
+
     programs.zsh = {
         enable = true;
         oh-my-zsh.enable = true;
-        initContent = ''
+        initExtra = ''
             eval "$(starship init zsh)"
+            ${zellijeval}
         '';
+
          
             shellAliases = {
             vi = "vim";
