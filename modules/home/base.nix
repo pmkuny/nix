@@ -1,6 +1,8 @@
 { pkgs, config, ...}: {
-    
-    
+    imports = [
+        ../packages.nix
+    ];
+
     programs.zsh = {
         enable = true;
     
