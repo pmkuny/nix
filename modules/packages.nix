@@ -4,8 +4,10 @@
   home.packages = [
     pkgs.starship
     pkgs.gemini-cli
+    pkgs.ollama
     pkgs.zellij
     pkgs.wireguard-tools
+    pkgs.raycast
   ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
     pkgs.firefox
     pkgs.google-chrome

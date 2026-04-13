@@ -36,7 +36,8 @@ in
     programs.zsh = {
         enable = true;
         oh-my-zsh.enable = true;
-        initExtra = ''
+        initContent = ''
+            set -o vi
             eval "$(starship init zsh)"
             ${zellijeval}
         '';
