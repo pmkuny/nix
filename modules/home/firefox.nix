@@ -6,15 +6,15 @@
     profiles.default = {
       isDefault = true;
       settings = {
-        "browser.startup.homepage" = "https://example.com";
+        "browser.bookmarks.showMobileBookmarks" = true;
+        "browser.toolbars.bookmarks.visibility" = "always";
         "browser.search.defaultenginename" = "DuckDuckGo";
         "browser.search.selectedEngine" = "DuckDuckGo";
         "privacy.donottrackheader.enabled" = true;
         "dom.security.https_only_mode" = true;
+        "mousewhee.with_control.action" = 3; 
+        "mousewheel.with_cmd.action" = 3;
       };
-      extensions = [
-        # Add shared extensions here if needed
-      ];
     };
   };
 }
