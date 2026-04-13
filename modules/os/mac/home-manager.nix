@@ -11,9 +11,9 @@
 
     users.patch = {
       imports = [
-        ../../modules/home/patch
-        ../../modules/home/firefox.nix
-        ../../modules/home/obsidian.nix
+        ../../home/patch
+        ../../home/firefox.nix
+        ../../home/obsidian.nix
       ];
 
       home = {

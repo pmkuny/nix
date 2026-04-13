@@ -25,7 +25,7 @@ This repository is a Nix flake that defines system configurations for multiple m
     - `linux/` - Shared Linux configuration
     - `mac/` - Shared macOS modules for nix-darwin
   - `home-manager.nix` - home-manager modules and shared options
-  - `packages.nix` - shared user packages for Linux hosts
+  - `packages.nix` - shared user packages for hosts that are part of the Nixpkgs ecosystem
   - `home/` - user-level home modules
     - `base.nix` - base home config
     - `firefox.nix` - shared Firefox configuration across Linux and macOS

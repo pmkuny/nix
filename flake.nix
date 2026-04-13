@@ -16,13 +16,25 @@
   outputs = inputs@{ nix-darwin, nixpkgs, home-manager, ... }: {
     darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      modules = [ ./hosts/mbp/default.nix ];
+      modules = [ 
+        ./hosts/mbp/default.nix 
+        {
+          nixpkgs.config.allowUnfree = true;
+          nix.settings.experimental-features = "nix-command flakes";
+        }
+      ];
       specialArgs = { inherit inputs; };
     };
 
     darwinConfigurations."macmini" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      modules = [ ./hosts/macmini/default.nix ];
+      modules = [ 
+        ./hosts/macmini/default.nix 
+        {
+          nixpkgs.config.allowUnfree = true;
+          nix.settings.experimental-features = "nix-command flakes";
+        }
+      ];
       specialArgs = { inherit inputs; };
     };
 
