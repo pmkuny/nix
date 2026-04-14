@@ -24,11 +24,17 @@ in
     ];
 
 
-    # USER IDENTITY (overrides base defaults)
     programs.git.settings = {
-           user.name = "Patrick Kuny";
-           user.email = "31052319+pmkuny@users.noreply.github.com";
-            };
+      user.name = "Patrick Kuny";
+      user.email = "31052319+pmkuny@users.noreply.github.com";
+    };
+
+    programs.jujutsu.enable = true;
+    programs.jujutsu.settings = {
+      user.name = "Patrick Kuny";
+      user.email = "31052319+pmkuny@users.noreply.github.com";
+      ui.editor = "vim;
+    };
 
    # Font Config
 
@@ -38,7 +44,8 @@ in
         enable = true;
         oh-my-zsh.enable = true;
         initContent = ''
-            set -o vi
+            bindkey -e
+            bindkey -v
             eval "$(starship init zsh)"
             ${zellijeval}
         '';

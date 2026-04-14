@@ -8,6 +8,7 @@
     pkgs.zellij
     pkgs.wireguard-tools
     pkgs.nerd-fonts.jetbrains-mono
+    pkgs.jujutsu
   ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
     pkgs.firefox
     pkgs.google-chrome
