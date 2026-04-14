@@ -1,13 +1,17 @@
 { pkgs, ... }: {
     
-    programs.vim.extraConfig = ''
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+    plugins = [ pkgs.vimPlugins.vim-colors-solarized ];
+    extraConfig = ''
         set nocompatible
         syntax on
         filetype plugin on
         filetype indent on
         set noswapfile
         set visualbell
-        colorscheme ron
+        colorscheme solarized
         set number
         set autoread
         set ruler
@@ -23,7 +27,9 @@
         set listchars=tab:>~
         set shiftwidth=4
         set foldmethod=indent
-'';
+  '';
+  };
+
 }
         
     

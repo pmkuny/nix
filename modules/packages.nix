@@ -7,6 +7,7 @@
     pkgs.ollama
     pkgs.zellij
     pkgs.wireguard-tools
+    pkgs.nerd-fonts.jetbrains-mono
   ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
     pkgs.firefox
     pkgs.google-chrome

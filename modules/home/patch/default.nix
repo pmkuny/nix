@@ -24,15 +24,16 @@ in
     ];
 
 
-  # USER IDENTITY (overrides base defaults)
-         programs.git.settings = {
-                user.name = "Patrick Kuny";
-                user.email = "31052319+pmkuny@users.noreply.github.com";
+    # USER IDENTITY (overrides base defaults)
+    programs.git.settings = {
+           user.name = "Patrick Kuny";
+           user.email = "31052319+pmkuny@users.noreply.github.com";
             };
 
-# set up shell
+   # Font Config
 
 
+   # Setup zsh with Starship and Zellij
     programs.zsh = {
         enable = true;
         oh-my-zsh.enable = true;
@@ -50,11 +51,5 @@ in
             pl = "pulumi";
         };
     };
-    
-    programs.vim = {
-        enable = true;
-        defaultEditor = true;
-    };
-        
     
 }
