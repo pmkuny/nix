@@ -27,7 +27,7 @@
 - **User Identity**: The 'patch' user is managed across three layers: System Account (NixOS), Home Manager Integration, and User Identity (Personal Identity + Base Environment).
 - **Nix-First Approach**: Prioritize Nixpkgs for all CLI and GUI applications across all systems. Use Homebrew on macOS only as a fallback for applications not available in Nixpkgs or those requiring specific macOS integration (Casks).
 - **Standalone Targets**: Do not attempt to manage system services (kernel, bootloader) on 'desktop' as it is a standalone Home Manager target.
-- **Obsidian**: Managed via `programs.obsidian`. All global settings should be under `defaultSettings.app` for inheritance across vaults.
+- **Obsidian**: Managed via `programs.obsidian`. Behavioral settings are global via `defaultSettings.app`, but appearance, themes, and `sync.json` are managed per-vault via `home.file` to ensure reliable filesystem symlinking and direct control over specific JSON files.
 - **Firefox**: Extension installation is managed via Enterprise Policies, but "Allow in Private Windows" must be toggled manually in `about:addons`.
 
 ## Secret Management
