@@ -24,6 +24,22 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Mac Keybinds
+
+  services.keyd = {
+  enable = true;
+  keyboards = {
+    default = {
+      ids = [ "*" ];
+      settings = {
+        main = {
+          leftalt = "leftcontrol";
+          };
+        };
+      };
+    };
+  };
+  
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;

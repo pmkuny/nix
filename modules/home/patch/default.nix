@@ -45,6 +45,7 @@
         initContent = ''
             bindkey -e
             bindkey -v
+            eval "$(starship init zsh)"
         '';
 
         shellAliases = {

@@ -8,6 +8,8 @@
     pkgs.wireguard-tools
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.tmux
+    pkgs.fastfetch
+    pkgs.jujutsu
   ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
     pkgs.google-chrome
     pkgs.vscode
