@@ -7,5 +7,4 @@
 
   # Specific settings for NixOS Desktop
   networking.hostName = "desktop";
-  networking.networkmanager.enable = true;
 }

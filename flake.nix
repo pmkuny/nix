@@ -24,23 +24,17 @@
     darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [ 
-        ./hosts/mbp/default.nix 
-        {
-          nixpkgs.config.allowUnfree = true;
-          nix.settings.experimental-features = "nix-command flakes";
-        }
+        ./modules/os/mac/default.nix
+        ./hosts/mbp/default.nix
       ];
       specialArgs = { inherit inputs; };
     };
 
     darwinConfigurations."macmini" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-      modules = [ 
-        ./hosts/macmini/default.nix 
-        {
-          nixpkgs.config.allowUnfree = true;
-          nix.settings.experimental-features = "nix-command flakes";
-        }
+      modules = [
+        ./modules/os/mac/default.nix
+        ./hosts/macmini/default.nix
       ];
       specialArgs = { inherit inputs; };
     };
