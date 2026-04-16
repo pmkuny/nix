@@ -6,4 +6,7 @@
     # Any desktop-specific tools you want
     steam
   ];
+
+    networking.hostName = "desktop";
+
 }

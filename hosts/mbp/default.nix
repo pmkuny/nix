@@ -9,4 +9,7 @@
     ../../modules/os/mac/home-manager.nix
     ../../modules/os/mac/system.nix
   ];
+
+  networking.hostName = "mbp";
+
 }
