@@ -1,8 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
   # Specific settings for NixOS Desktop
   networking.hostName = "desktop";
-  
-  # Note: You will need to add your hardware-configuration.nix and bootloader settings here.
+  networking.networkmanager.enable = true;
 }
