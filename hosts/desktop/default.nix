@@ -1,12 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  # Specific settings for CachyOS Desktop
-  home.packages = with pkgs; [
-    # Any desktop-specific tools you want
-    steam
-  ];
-
-    networking.hostName = "desktop";
-
+  # Specific settings for NixOS Desktop
+  networking.hostName = "desktop";
+  
+  # Note: You will need to add your hardware-configuration.nix and bootloader settings here.
 }

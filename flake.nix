@@ -13,7 +13,14 @@
     };
   };
 
-  outputs = inputs@{ nix-darwin, nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nix-darwin, nixpkgs, home-manager, ... }: 
+  let
+    systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];
+    forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
+  in
+  {
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-rfc-style);
+
     darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [ 
@@ -44,23 +51,23 @@
       specialArgs = { inherit inputs; };
     };
 
-    # CachyOS / Standalone Home Manager Configuration
-    homeConfigurations."desktop" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      extraSpecialArgs = { inherit inputs; };
+    nixosConfigurations."desktop" = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       modules = [
         ./hosts/desktop/default.nix
-        ./modules/home/patch
-        ./modules/home/firefox.nix
-        ./modules/home/obsidian.nix
-        ./modules/packages.nix
+        ./hosts/desktop/gaming.nix
+        home-manager.nixosModules.home-manager
         {
-          home.username = "patch";
-          home.homeDirectory = "/home/patch";
-          home.stateVersion = "25.11";
-          programs.home-manager.enable = true; nixpkgs.config.allowUnfree = true;
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.patch = {
+            imports = [ ./modules/home/patch ./modules/home/firefox.nix ./modules/home/obsidian.nix ];
+            home.stateVersion = "25.11";
+          };
+          nixpkgs.config.allowUnfree = true;
         }
       ];
+      specialArgs = { inherit inputs; };
     };
   };
 }
