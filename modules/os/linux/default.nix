@@ -11,10 +11,6 @@
   # NetworkManager
   networking.networkmanager.enable = true;
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
@@ -27,13 +23,13 @@
   # Mac Keybinds
 
   services.keyd = {
-  enable = true;
-  keyboards = {
-    default = {
-      ids = [ "*" ];
-      settings = {
-        main = {
-          leftalt = "leftcontrol";
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+            leftalt = "leftcontrol";
           };
         };
       };
@@ -58,6 +54,7 @@
     isNormalUser = true;
     description = "patch";
     extraGroups = [ "networkmanager" "wheel" ];
+    initialPassword = "password"; # Change this immediately after login
   };
 
   home-manager = {
@@ -79,6 +76,4 @@
       };
     };
   };
-
-  system.stateVersion = "24.05";
 }
