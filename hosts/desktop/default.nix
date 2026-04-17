@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    # ./hardware-configuration.nix
   ];
 
   # Bootloader for Desktop
