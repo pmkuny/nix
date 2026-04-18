@@ -20,8 +20,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Mac Keybinds
+  # Thunderbolt
+  services.hardware.bolt.enable = true;
 
+  # Mac Keybinds
   services.keyd = {
     enable = true;
     keyboards = {

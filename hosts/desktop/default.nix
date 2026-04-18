@@ -14,13 +14,18 @@
   networking.hostName = "desktop";
 
   services.displayManager.gdm.enable = true;
-  services.desktopManager.cosmic.enable = true;
+  services.desktopManager.gnome.enable = true;
   services.udisks2.enable = true;
   security.polkit.enable = true;
   services.dbus.enable = true;
+  services.gvfs.enable = true;
+
   environment.systemPackages = with pkgs; [
-	polkit_gnome
+    adwaita-icon-theme
+    polkit_gnome
+    gnome-extension-manager
   ];
+
 
   nixpkgs.config.allowUnfree = true;
 
