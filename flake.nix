@@ -53,7 +53,7 @@
       modules = [
         ./modules/os/linux/default.nix
         ./hosts/desktop/default.nix
-        ./hosts/desktop/gaming.nix
+#	/etc/nixos/configuration.nix
       ];
       specialArgs = { inherit inputs; };
     };

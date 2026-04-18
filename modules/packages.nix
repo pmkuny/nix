@@ -17,5 +17,6 @@
     pkgs.discord
     pkgs.element-desktop
     pkgs.tailscale
+    pkgs.steam
   ];
 }
