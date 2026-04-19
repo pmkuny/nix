@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./gaming.nix
+    ./keys.nix
   ];
 
   # Bootloader for Desktop
