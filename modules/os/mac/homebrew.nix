@@ -11,7 +11,7 @@
       "firefox"
       "font-hack-nerd-font"
       "google-chrome"
-      "iterm2"
+      "ghostty"
       "jordanbaird-ice"
       "kiro"
       "kiro-cli"

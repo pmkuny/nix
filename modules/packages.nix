@@ -10,6 +10,9 @@
     pkgs.tmux
     pkgs.fastfetch
     pkgs.jujutsu
+    pkgs.bitwarden-cli
+    pkgs.age
+    pkgs.sops
   ] ++ pkgs.lib.optionals pkgs.stdenv.isLinux [
     pkgs.google-chrome
     pkgs.vscode
