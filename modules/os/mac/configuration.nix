@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, username, ... }: {
   environment.systemPackages = [ 
     pkgs.git 
     pkgs.vim 
@@ -15,9 +15,9 @@
 
   system.stateVersion = 6;  # for macOS 26
 
-  system.primaryUser = "patch";
+  system.primaryUser = username;
 
-  users.users.patch.home = "/Users/patch";
+  users.users.${username}.home = "/Users/${username}";
 
 
   # Determinate Nix will manage nix itself, instead of Nix Darwin

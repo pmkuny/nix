@@ -1,0 +1,24 @@
+# Example of a local.nix file (not tracked by git)
+# Copy this to local.nix and fill in your secret values.
+
+inputs:
+let
+  nix-darwin = inputs.nix-darwin;
+in
+{
+  darwinConfigurations."HOSTNAME" = nix-darwin.lib.darwinSystem {
+    system = "aarch64-darwin";
+    modules = [
+      ./modules/os/mac/default.nix
+      ./hosts/work-mac.nix
+    ];
+    specialArgs = {
+      inherit inputs;
+      hostname = "WORK_HOSTNAME";
+      username = "WORK_USERNAME";
+      # You can point to an existing config like 'patch' without naming the folder
+      # userHomeConfig = ./modules/home/user; # Or ./modules/home/patch
+      userHomeConfig = ./modules/home/patch
+    };
+  };
+}

@@ -1,4 +1,4 @@
-{ hostname, ... }:
+{ hostname, username, ... }:
 
 {
   nixpkgs.hostPlatform = "aarch64-darwin";

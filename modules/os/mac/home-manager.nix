@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, username, userHomeConfig ? ../../home/${username}, ... }:
 
 {
   imports = [
@@ -9,16 +9,16 @@
     useGlobalPkgs = true;
     useUserPackages = true;
 
-    users.patch = {
+    users.${username} = {
       imports = [
-        ../../home/patch
+        userHomeConfig
         ../../home/firefox.nix
         ../../home/obsidian.nix
       ];
 
       home = {
-        username = "patch";
-        homeDirectory = "/Users/patch";
+        username = username;
+        homeDirectory = "/Users/${username}";
         stateVersion = "25.11";
       };
     };
