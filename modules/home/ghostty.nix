@@ -17,8 +17,10 @@ in
     
     settings = {
       theme = "dark:iTerm2 Solarized Dark,light:iTerm2 Solarized Light";
+      font-family = "JetBrainsMono Nerd Font Mono";
       font-size = 16;
       cursor-style = "block";
+      keybind = "global:cmd+;=toggle_quick_terminal";
     };
   };
 }

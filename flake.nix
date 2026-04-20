@@ -30,7 +30,12 @@
           ./modules/os/mac/default.nix
           ./hosts/mbp/default.nix
         ];
-        specialArgs = { inherit inputs; hostname = "mbp"; username = "patch"; };
+        specialArgs = { 
+          inherit inputs; 
+          hostname = "mbp"; 
+          username = "patch"; 
+          userHomeConfig = ./modules/home/patch;
+        };
       };
 
       "macmini" = nix-darwin.lib.darwinSystem {
@@ -39,7 +44,12 @@
           ./modules/os/mac/default.nix
           ./hosts/macmini/default.nix
         ];
-        specialArgs = { inherit inputs; hostname = "macmini"; username = "patch"; };
+        specialArgs = { 
+          inherit inputs; 
+          hostname = "macmini"; 
+          username = "patch"; 
+          userHomeConfig = ./modules/home/patch;
+        };
       };
     } // (local.darwinConfigurations or { });
 
@@ -58,7 +68,7 @@
         modules = [
           ./modules/os/linux/default.nix
           ./hosts/desktop/default.nix
-#	/etc/nixos/configuration.nix
+         #/etc/nixos/configuration.nix
         ];
         specialArgs = { inherit inputs; };
       };

@@ -1,7 +1,6 @@
 { pkgs, username, ... }: {
   environment.systemPackages = [ 
     pkgs.git 
-    pkgs.vim 
     pkgs.tree
     ];
 

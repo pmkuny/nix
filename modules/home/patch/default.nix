@@ -21,7 +21,6 @@
     imports = [
       ../base.nix
       ../obsidian.nix
-      ./vim.nix
     ];
 
 
@@ -35,7 +34,7 @@
     programs.jujutsu.settings = {
       user.name = "Patrick Kuny";
       user.email = "31052319+pmkuny@users.noreply.github.com";
-      ui.editor = "vim";
+      ui.editor = "nvim";
     };
 
 
@@ -49,7 +48,6 @@
         '';
 
         shellAliases = {
-        vi = "vim";
         k = "kubectl";
         tf = "terraform";
         pl = "pulumi";
