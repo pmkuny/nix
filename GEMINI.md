@@ -24,7 +24,9 @@
 - **NixOS (desktop)**: Use `sudo nixos-rebuild switch --flake .#desktop`.
 
 ## Configuration Principles
-- **User Identity**: The 'patch' user is managed across three layers: System Account (NixOS), Home Manager Integration, and User Identity (Personal Identity + Base Environment).
+- **User Identity**: The system supports flexible user identities via `username` and `userHomeConfig` specialArgs. While 'patch' is the primary user, the configuration is parameterized to support other usernames, especially for work environments.
+- **Local Configuration**: Use `local.nix` (untracked) for machine-specific configurations or those containing sensitive information that shouldn't be in the main flake. A `local.nix.example` is provided as a template.
+- **Work Mac Setup**: A dedicated guide for setting up work-specific macOS hosts is available in `SETUP_WORK_MAC.md`.
 - **Nix-First Approach**: Prioritize Nixpkgs for all CLI and GUI applications across all systems. Use Homebrew on macOS only as a fallback for applications not available in Nixpkgs or those requiring specific macOS integration (Casks).
 - **Obsidian**: Managed via `programs.obsidian`. Behavioral settings are global via `defaultSettings.app`, but appearance, themes, and `sync.json` are managed per-vault via `home.file` to ensure reliable filesystem symlinking and direct control over specific JSON files.
 - **Firefox**: Extension installation is managed via Enterprise Policies, but "Allow in Private Windows" must be toggled manually in `about:addons`.
