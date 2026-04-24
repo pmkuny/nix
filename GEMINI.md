@@ -7,17 +7,21 @@
 - **DO NOT** run `git commit` without explicit user instruction in the form of user: "run git commit explicitly"
 - Any command that modifies the filesystem outside of the project directory requires explicit user instruction.
 
-## Commit Messages
-- **Semantic Commits** - Use a custom version of Semantic Commit Messages:
+## Git and Commits
+- **Semantic Commits**: Use a custom version of Semantic Commit Messages:
     - The format will always be `type(hosts): description`
         - `type` can be one of the following:
             - `prog`: for executable or program/package management changes
             - `user`: for user configuration changes (usually done through home manager)
             - `set`: for system-specific settings, like enabling a systemd unit, adding hardware support, etc.
             - `feat`: Adding a new managed "thing" for a host that doesn't fall into one of the above types
+            - `admin`: Administrative changes, like typo correction, renaming files without changing contents, etc.
+            - `doc`: Documentation-specific changes, like updating the README.md, or other markdown files that serve only as communication to the user
         - `host` will always refer to the specific host we changed, which can be found in `hosts/`
             - For modifications that affect all hosts, use `all`, for modifications that affect a specific set of hosts (like OS-level), use the name of the relevant operating system, e.g. `linux` or `mac`. For modifications that affect mutliple hosts but aren't at the OS-level, you can put the multiple hosts in the tag, e.g. `prog(mbp,macmini):`
         - `description` should be a short message, typical of semantic commits. Longer descriptions can be put in the body of the commit message
+
+- **Jujutsu**: Prefer using jujutsu (`jj`) over regular git CLI when available. 
 
 ## Code Quality
 - **Formatting**: Use `nix fmt` to format Nix files before committing.
