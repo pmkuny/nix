@@ -5,7 +5,12 @@
     ./hardware-configuration.nix
     ./gaming.nix
     ./keys.nix
+    ./ai.nix
   ];
+
+  # Enable local AI packages, default false
+  localai.enable = true;
+
 
   # Bootloader for Desktop
   boot.loader.systemd-boot.enable = true;
