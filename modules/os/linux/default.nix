@@ -38,12 +38,16 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable Zsh system-wide
+  programs.zsh.enable = true;
+
   # NixOS user definition
   users.users.patch = {
     isNormalUser = true;
     description = "patch";
     extraGroups = [ "networkmanager" "wheel" ];
     initialPassword = "password"; # Change this immediately after login
+    shell = pkgs.zsh;
   };
 
   home-manager = {
