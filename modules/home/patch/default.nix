@@ -21,6 +21,8 @@
     imports = [
       ../base.nix
       ../obsidian.nix
+      ../firefox.nix
+      ./ssh.nix
     ];
 
 

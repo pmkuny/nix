@@ -54,10 +54,7 @@
       imports = [
         ../../home/patch
         ../../packages.nix
-        ../../home/firefox.nix
-        ../../home/obsidian.nix
       ];
-
       home = {
         username = "patch";
         homeDirectory = "/home/patch";

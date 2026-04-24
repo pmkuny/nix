@@ -12,8 +12,6 @@
     users.${username} = {
       imports = [
         userHomeConfig
-        ../../home/firefox.nix
-        ../../home/obsidian.nix
       ];
 
       home = {
