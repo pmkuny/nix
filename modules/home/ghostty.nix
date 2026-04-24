@@ -16,6 +16,7 @@ in
     enableZshIntegration = true; # This usually just adds to shell init, so it's safe.
     
     settings = {
+      command = "zsh";
       theme = "dark:iTerm2 Solarized Dark,light:iTerm2 Solarized Light";
       font-family = "JetBrainsMono Nerd Font Mono";
       font-size = 16;
