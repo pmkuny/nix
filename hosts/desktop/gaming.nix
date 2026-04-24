@@ -17,7 +17,6 @@
 
   environment.systemPackages = with pkgs; [
     steam
-    mangohud
     gamescope-wsi
     protonup-qt
     lutris
