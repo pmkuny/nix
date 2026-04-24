@@ -3,7 +3,7 @@
     enable = true;
     enableDefaultConfig = false;
     matchBlocks = {
-      myHost = {
+      mini = {
         hostname = "192.168.1.251";
         user = "root";
       };
