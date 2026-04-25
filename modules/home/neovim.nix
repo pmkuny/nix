@@ -30,6 +30,7 @@
       set listchars=tab:>~
       set shiftwidth=4
       set foldmethod=indent
+      set clipboard=unnamedplus
     '';
   };
 }
