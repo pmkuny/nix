@@ -9,7 +9,7 @@
   ];
 
   # Enable local AI packages, default false
-  localai.enable = true;
+  #localai.enable = true;
 
 
   # Bootloader for Desktop
