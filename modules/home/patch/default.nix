@@ -23,21 +23,22 @@
       ../obsidian.nix
       ../firefox.nix
       ./ssh.nix
+      ./git.nix
     ];
 
 
-    programs.git.settings = {
-      user.name = "Patrick Kuny";
-      user.email = "31052319+pmkuny@users.noreply.github.com";
-    };
+#    programs.git.settings = {
+#      user.name = "Patrick Kuny";
+#      user.email = "31052319+pmkuny@users.noreply.github.com";
+#    };
 
-    programs.jujutsu.enable = true;
-
-    programs.jujutsu.settings = {
-      user.name = "Patrick Kuny";
-      user.email = "31052319+pmkuny@users.noreply.github.com";
-      ui.editor = "nvim";
-    };
+#    programs.jujutsu.enable = true;
+#
+#    programs.jujutsu.settings = {
+#      user.name = "Patrick Kuny";
+#      user.email = "31052319+pmkuny@users.noreply.github.com";
+#      ui.editor = "nvim";
+#    };
 
 
     programs.zsh = {
