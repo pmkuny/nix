@@ -12,6 +12,9 @@
       syntax on
       filetype plugin on
       filetype indent on
+      set autoindent
+      set smartindent
+      set rnu
       set noswapfile
       set visualbell
       colorscheme solarized
