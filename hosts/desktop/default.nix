@@ -35,6 +35,14 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.overlays = [
+    (_: prev: {
+      openldap = prev.openldap.overrideAttrs (oldAttrs: {
+        doCheck = !prev.stdenv.hostPlatform.isi686;
+      });
+    })
+  ];
+
 
   system.stateVersion = "25.11";
 }
