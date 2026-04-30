@@ -2,6 +2,7 @@
 
 {
   programs.firefox = {
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     enable = true;
     profiles.default = {
       isDefault = true;
