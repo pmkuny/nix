@@ -22,6 +22,7 @@
       ../base.nix
       ../obsidian.nix
       ../firefox.nix
+      ../zed.nix
       ./ssh.nix
       ./git.nix
     ];
