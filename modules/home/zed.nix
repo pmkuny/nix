@@ -8,6 +8,7 @@
         buffer_font_family = "JetBrains Nerd Font Mono";
         base_keymap = "VSCode";
         vim_mode = true;
+        relative_line_numbers = true;
         ui_font_size = 16;
         theme = {
           mode = "system";
